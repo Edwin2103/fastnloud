@@ -1,0 +1,48 @@
+# Activar RewriteEngine
+RewriteEngine on
+Options +FollowSymLinks
+
+
+#REDIRIGE SI NO EXISTE
+ErrorDocument 404 http://fastnloud.tabwebs.com/
+
+
+
+#PREDETERMINADAS
+RewriteRule ^support$ ?p=support
+RewriteRule ^home$ ?p=home
+RewriteRule ^productos$ ?p=productos
+RewriteRule ^trabaja$ ?p=trabaja
+RewriteRule ^sobre-nosotros$ ?p=sobre-nosotros
+
+#USUARIO
+RewriteRule ^login$ ?p=login
+RewriteRule ^registro$ ?p=registro
+RewriteRule ^publicar$ ?p=publicar
+RewriteRule ^calendario$ ?p=calendario
+RewriteRule ^salir$ ?p=salir
+RewriteRule ^lista-deseos$ ?p=carro
+RewriteRule ^lista-deseos&eliminar= ?p=carro&eliminar=$1
+RewriteRule ^lista-deseos&pag=([0-9]+)$ ?p=carro&pag=$1
+
+#GESTION
+RewriteRule ^gestionar$ ?p=gestionar
+RewriteRule ^mis-anuncios$ ?p=mis-anuncios
+RewriteRule ^mi-cuenta$ ?p=mi-cuenta
+RewriteRule ^foro$ ?p=foro
+RewriteRule ^modificar-anuncio$ ?p=modificar-anuncio
+RewriteRule ^modificar-anuncio&([0-9]+)$ ?p=modificar-anuncio&id_anuncio=$1
+RewriteRule ^restablece-contraseña$ ?p=password
+RewriteRule ^restablece-contraseña&(.*)$ ?p=password&email=$1
+RewriteRule ^envio_email$ ?p=envio_email
+RewriteRule ^envio_email&(.*)$ ?p=envio_email&email=$1
+
+#HOME
+RewriteRule ^coches$ ?p=vehiculos
+RewriteRule ^motos$ ?p=motos
+RewriteRule ^coches&pag=([0-9]+)$ ?p=vehiculos&pag=$1
+RewriteRule ^motos&pag=([0-9]+)$ ?p=motos&pag=$1
+
+
+
+
