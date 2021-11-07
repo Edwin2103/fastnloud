@@ -1,0 +1,5 @@
+<?php
+	'project' => [
+		'namespace' => 'fastnloud'
+	];
+?>

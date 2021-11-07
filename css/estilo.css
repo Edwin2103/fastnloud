@@ -1,0 +1,12 @@
+
+#contaanuncios {
+	height: 200px;
+	width: 100%;
+	border: 1px solid #ddd;
+	overflow-y: scroll;
+}
+.imagen_carro{
+	width:50px;
+	height:50px;
+	border-radius: 1000px;
+}
