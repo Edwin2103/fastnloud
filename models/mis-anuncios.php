@@ -19,10 +19,10 @@ $q = $mysqli->query("SELECT * FROM anuncios WHERE id_cliente = '$id_cliente' ORD
  
 <ul class="nav nav-pills nav-fill"style="background-color: black;">
   <li class="nav-item">
-    <a class="nav-link" href="mis-anuncios">Mis anuncios</a>
+    <a class="nav-link" href="?p=mis-anuncios">Mis anuncios</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="mi-cuenta">Mi cuenta</a>
+    <a class="nav-link" href="?p=mi-cuenta">Mi cuenta</a>
   </li>
 </ul>
 <form  action="" method="post"  enctype="multipart/form-data" style="padding: 1%;background-color: white" >  	
@@ -53,7 +53,7 @@ while($r = mysqli_fetch_array($q)){
 			<td id="contaanuncios"><?=$r['descripcion']?></td>
 			<td><?=$r['precio']?></td>
 			<td>		
-				<button class="btn btn-primary " type="button" ><i class="fa fa-edit"></i><a href="modificar-anuncio&<?=$r['id']?>">Actualizar</a> </button>
+				<button class="btn btn-primary " type="button" ><i class="fa fa-edit"></i><a href="?p=modificar-anuncio&<?=$r['id']?>">Actualizar</a> </button>
                 </button>
                 
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?=str_replace(' ','',$r['titulo']),$r['id']?>"><i class="fa fa-times"></i> Eliminar</button>
