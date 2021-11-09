@@ -61,6 +61,6 @@
 					</div>
 				</div>
             		<button class="btn btn-success" type="submit" value="registrarme" name="registrarme">Registrarme</button>
-            		<button class="btn btn-lg sr-button mt-1" value="login" name="login" ><a href="login">¿Ya tiene una cuenta? Inicia sesión.</a></button>
+            		<button class="btn btn-lg sr-button mt-1" value="login" name="login" ><a href="?p=login">¿Ya tiene una cuenta? Inicia sesión.</a></button>
 			</form>
 		</div>
