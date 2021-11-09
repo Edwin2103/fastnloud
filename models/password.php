@@ -81,7 +81,7 @@ while($r = mysqli_fetch_array($q)){
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
-			        <button type="submit" class="btn btn-danger" name="cancelar"><i class="fa fa-times"></i> <a href="gestionar">Salir</a></button>
+			        <button type="submit" class="btn btn-danger" name="cancelar"><i class="fa fa-times"></i> <a href="?p=gestionar">Salir</a></button>
 			      </div>
 			    </div>
 			  </div>
