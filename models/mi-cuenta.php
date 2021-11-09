@@ -14,10 +14,10 @@ while($r = mysqli_fetch_array($q)){
 	?>
 <ul class="nav nav-pills nav-fill"style="background-color: black;">
   <li class="nav-item">
-    <a class="nav-link" href="mis-anuncios">Mis anuncios</a>
+    <a class="nav-link" href="?p=mis-anuncios">Mis anuncios</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="mi-cuenta">Mi cuenta</a>
+    <a class="nav-link" href="?p=mi-cuenta">Mi cuenta</a>
   </li>
 </ul>
  	<div class="container"style="padding: 1%;background-color: white;border-radius: 5px"  >
@@ -77,7 +77,7 @@ while($r = mysqli_fetch_array($q)){
 							    <input  class="form-control" type="password" name="password" id="password">
 							</div>
 						</div>
-						<a href="envio_email&<?=$r['email']?>">¿Ha olvidado la contraseña?</a>
+						<a href="?p=envio_email&<?=$r['email']?>">¿Ha olvidado la contraseña?</a>
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
@@ -105,7 +105,7 @@ while($r = mysqli_fetch_array($q)){
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
-			        <button type="submit" class="btn btn-danger" name="cancelar"><i class="fa fa-times"></i> <a href="gestionar">Salir</a></button>
+			        <button type="submit" class="btn btn-danger" name="cancelar"><i class="fa fa-times"></i> <a href="?p=gestionar">Salir</a></button>
 			      </div>
 			    </div>
 			  </div>
