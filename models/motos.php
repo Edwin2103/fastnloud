@@ -98,7 +98,7 @@
 </form>
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link" href="motos&pag=1">Primera</a></li>
+        <li class="page-item"><a class="page-link" href="?p=motos&pag=1">Primera</a></li>
 
         <li class="<?php if($pag <= 1){ echo 'disabled'; } ?>"><a class="page-link" href="<?php if($pag <= 1){ echo '#'; } else { echo "motos&pag=".($pag - 1); } ?>">Anterior</a></li>
 
