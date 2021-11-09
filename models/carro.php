@@ -62,7 +62,7 @@
 										</div>
 									</div>
 								</div>
-									<button class="btn btn-info" type="submit" id="chatear" name="chatear"><a href="foro">Chatear</a> </button>
+									<button class="btn btn-info" type="submit" id="chatear" name="chatear"><a href="?p=foro">Chatear</a> </button>
 
 									<button type="button" class="btn btn-info" data-toggle="modal" data-target="#<?=str_replace(' ','',$r2['nombre']),$r['id_cliente']?>"><i class="fa fa-times"></i> Eliminar</button>	
 
