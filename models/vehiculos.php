@@ -82,12 +82,12 @@
 
     <nav aria-label="Page navigation example">
       <ul class="pagination justify-content-center">
-        <li class="page-item"><a class="page-link" href="coches&pag=1">Primera</a></li>
+        <li class="page-item"><a class="page-link" href="?p=vehiculos&pag=1">Primera</a></li>
 
-        <li class="<?php if($pag <= 1){ echo 'disabled'; } ?>"><a class="page-link" href="<?php if($pag <= 1){ echo '#'; } else { echo "coches&pag=".($pag - 1); } ?>">Anterior</a></li>
+        <li class="<?php if($pag <= 1){ echo 'disabled'; } ?>"><a class="page-link" href="<?php if($pag <= 1){ echo '#'; } else { echo "?p=vehiculos&pag=".($pag - 1); } ?>">Anterior</a></li>
 
-        <li class="<?php if($pag >= $total_pages){ echo 'disabled'; } ?>"><a class="page-link" href="<?php if($pag >= $total_pages){ echo '#'; } else { echo "coches&pag=".($pag + 1); } ?>">Siguiente</a></li>
+        <li class="<?php if($pag >= $total_pages){ echo 'disabled'; } ?>"><a class="page-link" href="<?php if($pag >= $total_pages){ echo '#'; } else { echo "?p=vehiculos&pag=".($pag + 1); } ?>">Siguiente</a></li>
 
-        <li class="page-item"><a class="page-link" href="coches&pag=<?php echo $total_pages; ?>">Última</a></li>
+        <li class="page-item"><a class="page-link" href="?p=vehiculos&pag=<?php echo $total_pages; ?>">Última</a></li>
       </ul>
     </nav>
