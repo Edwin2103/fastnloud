@@ -17,25 +17,25 @@
 			?>
 			<ul class="navbar-nav">
 		      <li class="nav-item active">
-		        <a class="nav-link" href="home"></a>
+		        <a class="nav-link" href="?p=home"></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="home">Home</a>
+		        <a class="nav-link" href="?p=home">Home</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="coches">Coches</a>
+		        <a class="nav-link" href="?p=vehiculos">Coches</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="motos">Motos</a>
+		        <a class="nav-link" href="?p=motos">Motos</a>
 		      </li>
 		     </ul>
 		  	<ul class="nav navbar-nav ml-auto">
 				  <li class="nav-item">
-			        <a class="nav-link" href="login"><span class="fas fa-user"></span> Login</a>
+			        <a class="nav-link" href="?p=login"><span class="fas fa-user"></span> Login</a>
 			      </li>
 
 			      <li class="nav-item">
-			        <a class="nav-link" href="registro"><span class="fas fa-user"></span> Registrate</a>
+			        <a class="nav-link" href="?p=registro"><span class="fas fa-user"></span> Registrate</a>
 			      </li>
 			    </ul>
 		  	<?php
@@ -44,16 +44,16 @@
 			?>
 		    <ul class="navbar-nav">
 		      <li class="nav-item active">
-		        <a class="nav-link" href="home"></a>
+		        <a class="nav-link" href="?p=home"></a>
 		      </li>
 		      <li class="nav-item ">
-		        <a class="nav-link" href="home">Home</a>
+		        <a class="nav-link" href="?p=home">Home</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="coches">Coches</a>
+		        <a class="nav-link" href="?p=vehiculos">Coches</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="motos">Motos</a>
+		        <a class="nav-link" href="?p=motos">Motos</a>
 		      </li>
 
 
@@ -72,16 +72,16 @@
 			        </a>
 			        </button>
 			        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-			          <a class="dropdown-item" href="gestionar"><span class="fa fa-briefcase" aria-hidden="true">    </span>  Gestionar</a>
-			          <a class="dropdown-item" href="publicar"><span class="fa fa-upload" aria-hidden="true">   </span>  Publicar</a>
-			          <a class="dropdown-item" href="lista-deseos"><span class="fa fa-shopping-cart" aria-hidden="true">   </span>  Lista deseos</a>
-			          <a class="dropdown-item" href="foro"><span class="fa fa-envelope" aria-hidden="true">  </span>  Foro</a>
+			          <a class="dropdown-item" href="?p=gestionar"><span class="fa fa-briefcase" aria-hidden="true">    </span>  Gestionar</a>
+			          <a class="dropdown-item" href="?p=publicar"><span class="fa fa-upload" aria-hidden="true">   </span>  Publicar</a>
+			          <a class="dropdown-item" href="?p=lista-deseos"><span class="fa fa-shopping-cart" aria-hidden="true">   </span>  Lista deseos</a>
+			          <a class="dropdown-item" href="?p=foro"><span class="fa fa-envelope" aria-hidden="true">  </span>  Foro</a>
 			          <div class="dropdown-divider"></div>
-			          <a class="dropdown-item" href="calendario"><span class="fa fa-calendar" aria-hidden="true">   </span>  Calendario</a>	          
+			          <a class="dropdown-item" href="?p=calendario"><span class="fa fa-calendar" aria-hidden="true">   </span>  Calendario</a>	          
 			        </div>
 			      </li>
 			      <li class="nav-item">
-			        <a class="nav-link" href="salir"><span class="fas fa-sign-in-alt"></span> Salir</a>
+			        <a class="nav-link" href="?p=salir"><span class="fas fa-sign-in-alt"></span> Salir</a>
 			      </li>
 			    </ul>
 
@@ -101,7 +101,7 @@
 
 				if(!isset($_SESSION['id_cliente'])){
 					if(file_exists("models/".$p.".php")){
-						if ($p!="publicar" && $p!="gestionar" && $p!="carro" && $p!="foro" && $p!="calendario") {
+						if ($p!="publicar" && $p!="gestionar" && $p!="carro" && $p!="foro" && $p!="calendario"&& $p!="lista-deseos") {
 							include "models/".$p.".php";
 						}else{
 							echo '<div class="alert-dismissible"></div>';
