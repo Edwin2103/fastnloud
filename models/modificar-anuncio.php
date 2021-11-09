@@ -96,7 +96,7 @@
 			      </div>
 			      <div class="modal-footer">
 			        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
-			        <button type="submit" class="btn btn-danger" name="cancelar"><i class="fa fa-times"></i> <a href="mis-anuncios">Salir</a></button>
+			        <button type="submit" class="btn btn-danger" name="cancelar"><i class="fa fa-times"></i> <a href="?p=mis-anuncios">Salir</a></button>
 			      </div>
 			    </div>
 			  </div>
