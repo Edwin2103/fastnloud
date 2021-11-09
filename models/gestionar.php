@@ -1,9 +1,9 @@
 <ul class="nav nav-pills nav-fill" style="background-color:white;color:black">
   <li class="nav-item">
-    <a class="nav-link" href="mis-anuncios">Mis anuncios</a>
+    <a class="nav-link" href="?p=mis-anuncios">Mis anuncios</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="mi-cuenta">Mi cuenta</a>
+    <a class="nav-link" href="?p=mi-cuenta">Mi cuenta</a>
   </li>
 </ul>
 <link rel="stylesheet" type="text/css" href="css/estiloIndex.css"> 
