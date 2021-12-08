@@ -2,7 +2,7 @@
 
  
 
-        $sql = "SELECT * FROM anuncios WHERE id_categoria=2 ORDER BY id DESC";// LIMIT $offset, $no_of_records_per_page";
+        $sql = "SELECT * FROM anuncios ORDER BY id DESC";// LIMIT $offset, $no_of_records_per_page";
         $res_data = $mysqli->query($sql);
 
     if(isset($_POST['insert_carro'])) {
@@ -21,7 +21,36 @@
             
     }
     ?>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable( {
+        responsive: true,
+        language: {
+        "decimal": "",
+        "emptyTable": "No hay información",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar _MENU_ Entradas",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "Buscar:",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+            "first": "Primero",
+            "last": "Ultimo",
+            "next": "Siguiente",
+            "previous": "Anterior"
+        }
+    },
+        "lengthMenu": [[4, 10,25, 50, -1], [4, 10,25,50, "Todo"]]
 
+    } );
+} );
+
+</script>
 <form name="input" action="" method="POST" class="form-horizontal" enctype="multipart/form-data" style="padding:2px;background-color: white;">
     <table id="example" class="display" style="width:100%">
             <thead>
@@ -57,12 +86,14 @@
                                         <?php
                     if(!isset($_SESSION['id_cliente'])){
                     ?>
-                        <td><button class="btn btn-primary btn-sm" type="submit"onclick="myFunction()" name="no_log">Añadir a la lista de deseos</button></td>
+                    
+                     <td><button class="btn btn-primary btn-sm" type="submit"onclick="myFunction()" name="no_log">Lista de deseos</button></td>
                         
 
                     <?php   
                     }else{
                     ?>  
+                    
                     <td><button type="submit" class="btn btn-primary btn-sm" id="insert_carro" name="insert_carro" value="<?=$row['id']?>">Añadir a la lista de deseos</button></td>
                     <?php   
                     }
@@ -89,33 +120,3 @@
             </tfoot>
         </table>
     </form>
-
-    <script type="text/javascript">
-$(document).ready(function() {
-    $('#example').DataTable( {
-        responsive: true,
-        language: {
-        "decimal": "",
-        "emptyTable": "No hay información",
-        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-        "infoPostFix": "",
-        "thousands": ",",
-        "lengthMenu": "Mostrar _MENU_ Entradas",
-        "loadingRecords": "Cargando...",
-        "processing": "Procesando...",
-        "search": "Buscar:",
-        "zeroRecords": "Sin resultados encontrados",
-        "paginate": {
-            "first": "Primero",
-            "last": "Ultimo",
-            "next": "Siguiente",
-            "previous": "Anterior"
-        }
-    },
-        "lengthMenu": [[4, 10,25, 50, -1], [4, 10,25,50, "Todo"]]
-    } );
-} );
-
-</script>

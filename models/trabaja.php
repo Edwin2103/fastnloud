@@ -14,15 +14,15 @@
             //Server settings
             //$mail->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
             $mail->isSMTP();                                            // Send using SMTP
-            $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+            $mail->Host       = 'smtp.serviciodecorreo.es;                    // Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-            $mail->Username   = 'edwindaw1dam@gmail.com';                     // SMTP username
-            $mail->Password   = 'Silvialamejor3';                               // SMTP password
+            $mail->Username   = 'fastnloud@tabwebs.com';                     // SMTP username
+            $mail->Password   = 'Pantalones21';                               // SMTP password
             $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-            $mail->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
+            $mail->Port       = 465;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
 
             //Recipients
-            $mail->setFrom('edwindaw1dam@gmail.com', $nombre);
+            $mail->setFrom('fastnloud@tabwebs.com', $nombre);
             $mail->addAddress('edwinorlando21@gmail.com');     // Add a recipient
             //$mail->addAddress('ellen@example.com');               // Name is optional
             //$mail->addReplyTo('info@example.com', 'Information');

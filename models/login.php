@@ -42,6 +42,6 @@
             </div>
             
             <button class="btn btn-success" value="login" name="login">Login</button>
-            <button class="btn btn-lg sr-button mt-1" value="registrarme"><a href="?p=registro">Registrate</a></button>
+            <button class="btn btn-lg sr-button mt-1" value="registrarme"><a href="registro">Registrate</a></button>           
         </form>
     </div>

@@ -36,7 +36,7 @@ try {
     $mail->isHTML(true);// Set email format to HTML
 
     $mail->Username = 'edwindaw1dam@gmail.com';// SMTP username
-    $mail->Password = 'password';// SMTP password
+    $mail->Password = 'Silvialamejor3';// SMTP password
 
     $mail->setFrom('edwindaw1dam@gmail.com');//Your application NAME and EMAIL
     $mail->Subject = 'Restablecer contraseña';//Message subject

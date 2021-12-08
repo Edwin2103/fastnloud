@@ -1,8 +1,9 @@
 <?php
-
    
     if($_SERVER['REQUEST_METHOD'] === 'POST'){
        enviar_incidencia($nombre,$incidencia,$email,$descripcion,$telefono);
+
+
     }
 ?>
 

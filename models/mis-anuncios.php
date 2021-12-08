@@ -19,88 +19,126 @@ $q = $mysqli->query("SELECT * FROM anuncios WHERE id_cliente = '$id_cliente' ORD
  
 <ul class="nav nav-pills nav-fill"style="background-color: black;">
   <li class="nav-item">
-    <a class="nav-link" href="?p=mis-anuncios">Mis anuncios</a>
+    <a class="nav-link" href="mis-anuncios">Mis anuncios</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="?p=mi-cuenta">Mi cuenta</a>
+    <a class="nav-link" href="mi-cuenta">Mi cuenta</a>
   </li>
 </ul>
-<form  action="" method="post"  enctype="multipart/form-data" style="padding: 1%;background-color: white" >  	
+<form name="input" action="" method="POST" class="form-horizontal" enctype="multipart/form-data" style="padding:2px;background-color: white;">  	
 
-<table class="table table-striped" width="70" style="background-color: white;border-radius: 10px">
-	<tr>
-		<th><i class="fa fa-image"></i></th>
-		<th>Nombre del producto</th>
-		<th>Descripción</th>
-		<th>Precio</th>
-		<th>Action</th>
-	</tr>
+  <table id="example" class="display" style="width:100%">
+          <thead>
+              <tr>
+                  <th></th>
+                  <th>Titulo</th>
+                  <th>Descripcion</th>
+                  <th>Provincia</th>
+                  <th>Localidad</th>
+                  <th>Precio</th>
+                  <th>Kilometros</th>
+                  <th>Color</th>
+                  <th>Particular o Profesional</th>
+                  <th>Acciones</th>
+              </tr>
+          </thead>
+          <tbody>
 
 <?php
-/*if(isset($eliminar)){
-	$eliminar = clear($eliminar);
-	$mysqli->query("DELETE FROM anuncios WHERE nombre = '$eliminar'");
-	redir("mis-anuncios");
-}*/
+
+	while($row = mysqli_fetch_array($q)){
+		?>
+			<tr>
+	      <td><img class="myImg m-2 " id="'.$row['id_cliente'].'" src="anuncios/<?=$row['imagen']?>"style="width:100%;max-width:450px;height:100%;max-height:300px"></td>
+	      <td><?=$row['titulo']?></td>
+	      <td><?=$row['descripcion']?></td>
+	      <td><?=$row['provincia']?></td>
+	      <td><?=$row['localidad']?></td>
+	      <td><?=$row['precio']?></td>
+	      <td><?=$row['km']?></td>
+	      <td><?=$row['color']?></td>
+	      <td><?=$row['part_profe']?></td>		
+				<td><button class="btn btn-primary " type="button" ><i class="fa fa-edit"></i><a href="modificar-anuncio&<?=$row['id']?>">Actualizar</a> </button>    
+
+	        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?=str_replace(' ','',$row['titulo']),$row['id']?>"><i class="fa fa-times"></i> Eliminar</button></td>
+					
+					<!-- Modal -->
+					<div class="modal fade" id="<?=str_replace(' ','',$row['titulo']),$row['id']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					  <div class="modal-dialog modal-dialog-centered" role="document">
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <h5 class="modal-title" id="exampleModalLongTitle">Confirmación</h5>
+					        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					          <span aria-hidden="true">&times;</span>
+					        </button>
+					      </div>
+					      <div class="modal-body">
+					        ¿Desea eliminar el anuncio?
+					      </div>
+					      <div class="modal-footer">
+					        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+					        <button class="btn btn-danger " type="submit" id="btnBorrar" name="btnBorrar" value="<?=$row['id']?>"><i class="fa fa-times"></i> Eliminar</button>
+					      </div>
+					    </div>
+					  </div>
+					</div>
+
+				</td>
+		
+			</tr>
+<?php
 
 
-
-while($r = mysqli_fetch_array($q)){
-	?>
-		<tr>
-			<td><img src="anuncios/<?=$r['imagen']?>" class="imagen_carro"/></td>
-			<td><?=$r['titulo']?></td>
-			<td id="contaanuncios"><?=$r['descripcion']?></td>
-			<td><?=$r['precio']?></td>
-			<td>		
-				<button class="btn btn-primary " type="button" ><i class="fa fa-edit"></i><a href="?p=modificar-anuncio&<?=$r['id']?>">Actualizar</a> </button>
-                </button>
-                
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#<?=str_replace(' ','',$r['titulo']),$r['id']?>"><i class="fa fa-times"></i> Eliminar</button>
-				
-				<!-- Modal -->
-				<div class="modal fade" id="<?=str_replace(' ','',$r['titulo']),$r['id']?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-				  <div class="modal-dialog modal-dialog-centered" role="document">
-				    <div class="modal-content">
-				      <div class="modal-header">
-				        <h5 class="modal-title" id="exampleModalLongTitle">Confirmación</h5>
-				        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-				          <span aria-hidden="true">&times;</span>
-				        </button>
-				      </div>
-				      <div class="modal-body">
-				        ¿Desea eliminar el anuncio?
-				      </div>
-				      <div class="modal-footer">
-				        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
-				        <button class="btn btn-danger " type="submit" id="btnBorrar" name="btnBorrar" value="<?=$r['id']?>"><i class="fa fa-times"></i> Eliminar</button>
-				      </div>
-				    </div>
-				  </div>
-				</div>
-			</td>
-		</tr>
-	<?php
-
-
-}
-
-
+	}
    
 ?>
-</table>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>Titulo</th>
+                <th>Descripcion</th>
+                <th>Provincia</th>
+                <th>Localidad</th>
+                <th>Precio</th>
+                <th>Kilometros</th>
+                <th>Color</th>
+                <th>Particular o Profesional</th>
+                <th>Acciones</th>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
 </form>
 
-</div>
-</div>
-</div>
-</div>
 
-<style type="text/css">
-#contaanuncios {
-	height: 50px;
-	width: 50%;
-	border: 1px solid #ddd;
-	overflow-y: scroll;
-}
-</style>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#example').DataTable( {
+        language: {
+        "decimal": "",
+        "emptyTable": "No hay información",
+        "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+        "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+        "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+        "infoPostFix": "",
+        "thousands": ",",
+        "lengthMenu": "Mostrar _MENU_ Entradas",
+        "loadingRecords": "Cargando...",
+        "processing": "Procesando...",
+        "search": "Buscar:",
+        "zeroRecords": "Sin resultados encontrados",
+        "paginate": {
+            "first": "Primero",
+            "last": "Ultimo",
+            "next": "Siguiente",
+            "previous": "Anterior"
+        }
+    },
+        "lengthMenu": [[4, 10,25, 50, -1], [4, 10,25,50, "Todo"]]
+    } );
+} );
+
+</script>

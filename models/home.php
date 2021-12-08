@@ -27,7 +27,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=sobre-nosotros"  class="hex-content">
+                                        <a href="sobre-nosotros"  class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-universal-access"></i>
@@ -48,7 +48,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=coches" class="hex-content">
+                                        <a href="coches" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-car"></i>
@@ -69,7 +69,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=motos"  class="hex-content">
+                                        <a href="motos"  class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-motorcycle"></i>
@@ -93,7 +93,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=login"  class="hex-content">
+                                        <a href="login"  class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-id-badge"></i>
@@ -114,7 +114,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=registro" class="hex-content">
+                                        <a href="registro" class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-bars"></i>
@@ -159,7 +159,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=gestionar"  class="hex-content" >
+                                        <a href="gestionar"  class="hex-content" >
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
@@ -180,7 +180,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=publicar"  class="hex-content">
+                                        <a href="publicar"  class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-upload"></i>
@@ -201,12 +201,12 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=foro" class="hex-content" >
+                                        <a href="muro" class="hex-content" >
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-clipboard"></i>
                                                 </span>
-                                                <span class="title">Foro</span>
+                                                <span class="title">Muro</span>
                                             </span>
                                             <svg viewBox="0 0 173.20508075688772 200" height="200" width="174" version="1.1" xmlns="http://www.w3.org/2000/svg"><path d="M86.60254037844386 0L173.20508075688772 50L173.20508075688772 150L86.60254037844386 200L0 150L0 50Z" fill="#1e2530"></path></svg>
                                         </a>
@@ -226,7 +226,7 @@
                                             <div></div>
                                             <div></div>
                                         </div>
-                                        <a href="?p=support"  class="hex-content">
+                                        <a href="support"  class="hex-content">
                                             <span class="hex-content-inner">
                                                 <span class="icon">
                                                     <i class="fa fa-cog"></i>
